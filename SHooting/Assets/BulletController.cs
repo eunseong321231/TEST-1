@@ -10,7 +10,7 @@ public class BulletController : MonoBehaviour
     // Start is called before the first frame update
     private void LateUpdate()
     {
-        float _moveSpeed = (moveSpeed + 10) * Time.deltaTime;
+        float _moveSpeed = (moveSpeed) * Time.fixedDeltaTime;
         transform.Translate(direction * _moveSpeed);
             if(this.transform.position.z >= 10)
         {
